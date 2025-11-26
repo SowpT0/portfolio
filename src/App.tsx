@@ -28,7 +28,7 @@ const projects: Project[] = [
       "Implements reconnection logic, backpressure handling, and structured logging for observability.",
     ],
     tech: ["Rust", "Tokio (async)", "gRPC", "Shredstream", "Event Bus", "PostgreSQL / log store"],
-    codeExampleTitle: "Simplified real-time pipeline loop (pseudocode)",
+    codeExampleTitle: "Pipeline loop",
     codeExample: `function run_realtime_pipeline(config):
     stream = connect_shredstream(config.validators)
 
@@ -56,7 +56,7 @@ const projects: Project[] = [
       "Designed with clear separation between quoting, routing, and execution layers.",
     ],
     tech: ["Rust", "DEX SDKs", "Async IO", "Routing Logic", "REST / gRPC"],
-    codeExampleTitle: "Route selection & execution (pseudocode)",
+    codeExampleTitle: "Route selection & execution",
     codeExample: `function find_best_route(order, dex_list):
     quotes = []
     for dex in dex_list:
@@ -100,7 +100,7 @@ function execute_route(route, dex_list):
       "Stores historical data for performance comparisons and trend analysis.",
     ],
     tech: ["Rust", "Async IO", "REST / gRPC", "Streaming Analytics"],
-    codeExampleTitle: "Event ingestion & DPS computation (pseudocode)",
+    codeExampleTitle: "Event ingestion & DPS computation",
     codeExample: `function run_dps_engine(config):
     stream = connect_game_api(config.source)
 
@@ -138,7 +138,7 @@ const Header: React.FC = () => (
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#fit">Why Me</a>
+        <a href="#fit">Focus</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -192,11 +192,11 @@ const Skills: React.FC = () => (
       <div className="skills-grid">
         <SkillGroup
           title="Languages"
-          items={["Rust (Tokio, async)", "Python", "TypeScript / JavaScript (for tooling & UIs)", "React", "C#","GO"]}
+          items={["Rust", "Python", "TypeScript / JavaScript", "React", "C#","GO"]}
         />
         <SkillGroup
           title="Backend & APIs"
-          items={["REST / gRPC API design", "WebSockets & streaming", "Authentication, pagination, rate limiting"]}
+          items={["REST / gRPC / Shredstream API design", "WebSockets & streaming", "Authentication, pagination, rate limiting"]}
         />
         <SkillGroup
           title="Data & Infrastructure"
@@ -204,6 +204,7 @@ const Skills: React.FC = () => (
             "PostgreSQL, Redis, MySQL",
             "Streaming/event-driven architectures",
             "Docker, basic CI/CD workflows",
+            "Decoding Shredstream packets"
           ]}
         />
         <SkillGroup
@@ -279,7 +280,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
         <pre>
           <code>{project.codeExample}</code>
         </pre>
-        <p className="code-note">Snippet simplified and partially pseudocode for portfolio purposes.</p>
       </div>
     )}
   </article>

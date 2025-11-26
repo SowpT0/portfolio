@@ -144,7 +144,6 @@ body {
   content: "";
   position: absolute;
   top: 10%;
-  right: -20%;
   width: clamp(260px, 40vw, 800px);
   height: clamp(260px, 40vw, 800px);
   background: radial-gradient(circle, rgba(99, 102, 241, 0.26), transparent 70%);
@@ -508,7 +507,7 @@ p {
 
   /* Pull About Me closer to the hero */
   #about {
-    padding-top: 1.2rem;       /* reduce space above About Me */
+    padding-top: 1.8rem;       /* reduce space above About Me */
     padding-bottom: 2.4rem;
   }
 
